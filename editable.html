@@ -17,15 +17,22 @@
     <script type="text/javascript" class="silex-script">function hideSome() {
   var x = document.getElementById("gruen");
   var y = document.getElementById("rot");
-  x.style.display = "none";
-  y.style.display = "block";
-  document.getElementById("ventil").firstChild.data  = "Ventil öffnen";
+  if (y.style.display === "none" && document.getElementById("notlog").style.display === "none")
+  {
+    x.style.display = "none";
+    y.style.display = "block";
+    document.getElementById("ventil").firstChild.data  = "Ventil öffnen";
 
-  setTimeout(logout, 2000);
-  setTimeout(ven, 4000);
-  setTimeout(warn1, 6000);
-  setTimeout(warn2, 10000);
-  setTimeout(warn3, 15000);
+    setTimeout(logout, 2000);
+    setTimeout(ven, 4000);
+    setTimeout(warn1, 6000);
+    setTimeout(warn2, 10000);
+    setTimeout(warn3, 15000);
+  }
+  else
+  {
+    window.alert("Keine Zugriffsrechte");
+  }
 } 
 function ven() {
   var x = document.getElementById("gruen");
