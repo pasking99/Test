@@ -17,13 +17,13 @@
     <script type="text/javascript" class="silex-script">function hideSome() {
   var x = document.getElementById("gruen");
   var y = document.getElementById("rot");
-  if (y.style.display === "none" && document.getElementById("notlog").style.display === "none")
+  if (document.getElementById("notlog").style.display === "none")
   {
     x.style.display = "none";
     y.style.display = "block";
     document.getElementById("ventil").firstChild.data  = "Ventil öffnen";
 
-    setTimeout(logout, 2000);
+    setTimeout(logout, 100);
     setTimeout(ven, 4000);
     setTimeout(warn1, 6000);
     setTimeout(warn2, 10000);
