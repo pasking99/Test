@@ -17,12 +17,10 @@
     <script type="text/javascript" class="silex-script">function hideSome() {
   var x = document.getElementById("gruen");
   var y = document.getElementById("rot");
-  if (y.style.display === "none") {
-    x.style.display = "none";
-    y.style.display = "block";
-    document.getElementById("ventil").firstChild.data  = "Ventil öffnen";
-    setTimeout(warn1(), 2000);
-  } 
+  x.style.display = "block";
+  y.style.display = "none";
+  document.getElementById("ventil").firstChild.data = "Ventil schließen";
+
 } 
 function warn1() {
   document.getElementById("w1").style.display = "block";
