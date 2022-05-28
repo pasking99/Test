@@ -216,9 +216,9 @@ function displayTimer(){
         timeCount = new Date();
     }
     allmilliseconds = timeCount.getTime();
-    milliseconds = allmilliseconds - 1000 * seconds - 60 * minutes - 60 * hours; 
+    milliseconds = allmilliseconds - (1000 * seconds) - (60 * minutes) - (60 * hours); 
     if(milliseconds > 999){
-        milliseconds = milliseconds - 1000;
+        milliseconds = 0;
         seconds++;
         if(seconds == 60){
             seconds = 0;
