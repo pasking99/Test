@@ -230,7 +230,7 @@ function displayTimer(){
     let m = minutes < 10 ? "0" + minutes : minutes;
     let s = seconds < 10 ? "0" + seconds : seconds;
     
-    timerRef.innerHTML = ` ${h} : ${m} : ${s} `;
+    timerRef.innerHTML = ` ${parseInt(h)} : ${parseInt(m)} : ${parseInt(s)} `;
 }
 
 
