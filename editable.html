@@ -198,7 +198,7 @@ function dreisig() {
 
     <div class="container">
         <div class="timerDisplay">
-            00 : 00 : 00 : 000
+            00 : 00 : 00 
         </div>
     </div>
  
@@ -217,18 +217,20 @@ function displayTimer(){
     }
     var timeCount2 =  Date.now();
     var difference = timeCount2-timeCount;
-    alert(difference);
+
     let seconds = difference / 1000;
     hours = parseInt( seconds / 3600 );
     seconds = seconds % 3600; 
     minutes = parseInt( seconds / 60 ); 
     seconds = seconds % 60;
 
+    alert(difference);
+
     let h = hours < 10 ? "0" + hours : hours;
     let m = minutes < 10 ? "0" + minutes : minutes;
     let s = seconds < 10 ? "0" + seconds : seconds;
     
-    timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
+    timerRef.innerHTML = ` ${h} : ${m} : ${s} `;
 }
 
 
