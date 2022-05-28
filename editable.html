@@ -216,8 +216,8 @@ function displayTimer(){
         timeCount = Date.now();
     }
     var timeCount2 =  Date.now();
-    alert(timeCount);
-    var difference = timeCount2.getTime()-timeCount.getTime();
+    var difference = timeCount2-timeCount;
+
     let seconds = difference / 1000;
     hours = parseInt( seconds / 3600 );
     seconds = seconds % 3600; 
