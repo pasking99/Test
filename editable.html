@@ -210,30 +210,21 @@ var timeCount = new Date();
 let firstT = 0;
 
 function displayTimer(){
-    if(firstT===0)
+    if(firstT === 0)
     { 
         firstT = 1;
         timeCount = new Date();
     }
-    allmilliseconds = timeCount.getTime();
-    milliseconds = allmilliseconds - (1000 * seconds) - (60 * minutes) - (60 * hours); 
-    if(milliseconds > 999){
-        milliseconds = 0;
-        seconds++;
-        if(seconds == 60){
-            seconds = 0;
-            minutes++;
-            if(minutes == 60){
-                minutes = 0;
-                hours++;
-            }
-        }
-    }
+    var timeCount2 = new Date();
+    var difference = timeCount2.getTime()-timeCount.getTime();
+    seconds = difference.getSeconds();
+    minutes = difference.getMinutes();
+    hours = difference.getHours();
+
     let h = hours < 10 ? "0" + hours : hours;
     let m = minutes < 10 ? "0" + minutes : minutes;
     let s = seconds < 10 ? "0" + seconds : seconds;
-    let ms = milliseconds < 10 ? "00" + milliseconds : milliseconds < 100 ? "0" + milliseconds : milliseconds;
-
+    
     timerRef.innerHTML = ` ${h} : ${m} : ${s} : ${ms}`;
 }
 
