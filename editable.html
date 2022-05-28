@@ -36,14 +36,14 @@ function hideSome() {
     let passwort = prompt("Kein Zugriffsrechte mehr, Sicherheitscode benötigt", "");
 
     if (passwort === "12345") {
-    x.style.display = "block";
-    y.style.display = "none";
-    document.getElementById("ventil").firstChild.data  = "Ventil schließen";
-    document.getElementById("notlog").style.display = "none";
-    document.getElementById("remote").style.display = "none";
-    setTimeout(entwarn3, 2000);
-    setTimeout(entwarn2, 5000);
-    setTimeout(entwarn1, 10000);
+      x.style.display = "none";
+      y.style.display = "block";
+      document.getElementById("ventil").firstChild.data  = "Ventil öffnen";
+      document.getElementById("notlog").style.display = "none";
+      document.getElementById("remote").style.display = "none";
+      setTimeout(entwarn3, 2000);
+      setTimeout(entwarn2, 5000);
+      setTimeout(entwarn1, 10000);
     } 
   }
 } 
