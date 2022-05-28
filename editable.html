@@ -23,12 +23,8 @@ function start() {
 }
 
 const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
 
-
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
+function login() {
     const password = loginForm.password.value;
 
 
@@ -38,7 +34,7 @@ loginButton.addEventListener("click", (e) => {
     } else {
         alert("Falsches Passwort.");
     }
-} )
+}
 
 function hideSome() {
   var x = document.getElementById("gruen");
@@ -174,28 +170,10 @@ function entwarn3() {
 
     <form id="login-form">
       <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
-      <input type="submit" value="Login" id="login-form-submit">
+      <input type="submit" value="Login" id="login-form-submit" onclick="return login();">
     </form>
 
   </main>
 
 
-<script>
-const loginForm = document.getElementById("login-form");
-const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
-
-
-loginButton.addEventListener("click", (e) => {
-    e.preventDefault();
-    const password = loginForm.password.value;
-
-
-    if (password === "h") {
-        alert("You have successfully logged in.");
-        location.reload();
-    } else {
-        loginErrorMsg.style.opacity = 1;
-    }
-} )
-</script></div></div></body></html>
+</div></div></body></html>
