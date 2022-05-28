@@ -204,8 +204,9 @@ function dreisig() {
  
     <script>
 let [milliseconds,seconds,minutes,hours] = [0,0,0,0];
+let allmilliseconds = 0;
 let timerRef = document.querySelector('.timerDisplay');
-var timeCount = new Date() ;
+var timeCount = new Date();
 let firstT = 0;
 
 function displayTimer(){
@@ -214,10 +215,10 @@ function displayTimer(){
         firstT = 1;
         timeCount = new Date();
     }
-    
-    milliseconds = timeCount.getTime();
-    if(milliseconds == 1000){
-        milliseconds = 0;
+    allmilliseconds = timeCount.getTime();
+    milliseconds = allmilliseconds - 1000 * seconds - 60 * minutes - 60 * hours; 
+    if(milliseconds > 999){
+        milliseconds = milliseconds - 1000;
         seconds++;
         if(seconds == 60){
             seconds = 0;
