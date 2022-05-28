@@ -27,11 +27,11 @@ const loginForm = document.getElementById("login-form");
 function login() {
     const password = loginForm.password.value;
 
-
     if (password === "h") {
         alert("Sie haben sich erfolgreich angemeldet.");
         window.location.href = "#!page-fliessbild";
-    } else {
+    } 
+    else {
         alert("Falsches Passwort.");
     }
 }
